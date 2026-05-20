@@ -1,0 +1,267 @@
+@use "sass:color";
+@use "../../../styles/variables" as *;
+
+$timeline-gutter: 56px;
+$marker-size: 44px;
+
+.journey {
+  position: relative;
+  padding: 80px 26px 96px;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.heading {
+  margin: 0;
+  max-width: 720px;
+  font-family: $section-title-font-family;
+  font-size: clamp(28px, 4vw, $font-size-4xl);
+  font-weight: $section-title-font-weight;
+  line-height: $section-title-line-height;
+  letter-spacing: $section-title-letter-spacing;
+  color: $section-title-color;
+}
+
+.headingAccent {
+  background: $gradient-cta;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: $timeline-gutter;
+}
+
+.timelineLine {
+  position: absolute;
+  left: calc($marker-size / 2 - 1px);
+  top: $marker-size;
+  bottom: $marker-size;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    rgba($primary-orange, 0.45) 0%,
+    rgba($primary-blue, 0.25) 50%,
+    rgba($primary-orange, 0.15) 100%
+  );
+  border-radius: 2px;
+}
+
+.timelineItem {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.timelineMarker {
+  position: absolute;
+  left: calc(-1 * $timeline-gutter + ($timeline-gutter - $marker-size) / 2);
+  top: 28px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $marker-size;
+  height: $marker-size;
+  border-radius: 50%;
+  border: 1px solid rgba($primary-orange, 0.45);
+  background: linear-gradient(
+    160deg,
+    rgba($bg-dark-tertiary, 0.9) 0%,
+    rgba($bg-dark-primary, 0.95) 100%
+  );
+  color: $primary-orange;
+  box-shadow:
+    $shadow-xl,
+    0 0 16px rgba($primary-orange, 0.12);
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px 32px;
+  border-radius: 16px;
+  border: 1px solid $glass-border-medium;
+  background: linear-gradient(
+    160deg,
+    rgba($bg-dark-tertiary, 0.55) 0%,
+    rgba($bg-dark-primary, 0.92) 100%
+  );
+  box-shadow:
+    $shadow-xl,
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition:
+    border-color $duration-normal $ease-out,
+    box-shadow $duration-normal $ease-out;
+
+  &:hover {
+    border-color: rgba($primary-orange, 0.35);
+    box-shadow:
+      $shadow-xl,
+      0 0 24px rgba($primary-orange, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+}
+
+.cardMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.dateBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-family: $font-primary;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  color: $section-subtitle-color;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid $glass-border-dark;
+}
+
+.dateBadgeActive {
+  color: $primary-orange;
+  background: rgba($primary-orange, 0.12);
+  border-color: rgba($primary-orange, 0.28);
+}
+
+.metaBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-family: $font-primary;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  letter-spacing: $letter-spacing-wide;
+  line-height: 1.2;
+}
+
+.metaBadgeCurrent {
+  color: $secondary-green;
+  background: rgba($secondary-green, 0.12);
+  border: 1px solid rgba($secondary-green, 0.35);
+}
+
+.metaBadgeAchievement {
+  color: $secondary-orange;
+  background: rgba($secondary-orange, 0.12);
+  border: 1px solid rgba($secondary-orange, 0.35);
+}
+
+.cardTitle {
+  margin: 0;
+  font-family: $font-primary;
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  color: $text-white;
+  line-height: $line-height-tight;
+}
+
+.cardCompany {
+  margin: 0;
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  color: $primary-orange;
+  line-height: $line-height-normal;
+}
+
+.highlightList {
+  margin: 4px 0 0;
+  padding: 0 0 0 4px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  li {
+    position: relative;
+    padding-left: 18px;
+    font-family: $font-secondary;
+    font-size: $font-size-sm;
+    color: $section-subtitle-color;
+    line-height: $line-height-relaxed;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $primary-orange;
+      box-shadow: 0 0 6px rgba($primary-orange, 0.45);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .journey {
+    padding: 64px 20px 72px;
+  }
+
+  .inner {
+    gap: 36px;
+  }
+
+  .timeline {
+    gap: 22px;
+    padding-left: 44px;
+  }
+
+  $mobile-marker: 36px;
+
+  .timelineLine {
+    left: calc($mobile-marker / 2 - 1px);
+  }
+
+  .timelineMarker {
+    left: calc(-44px + (44px - $mobile-marker) / 2);
+    top: 22px;
+    width: $mobile-marker;
+    height: $mobile-marker;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .card {
+    padding: 22px 20px;
+  }
+
+  .cardTitle {
+    font-size: $font-size-xl;
+  }
+}

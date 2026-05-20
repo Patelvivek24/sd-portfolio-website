@@ -1,0 +1,222 @@
+@use "sass:color";
+@use "../../../styles/variables" as *;
+
+$hero-grid-line: color.change($primary-blue, $alpha: 0.14);
+
+.hero {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 48px 26px;
+  text-align: center;
+  isolation: isolate;
+}
+
+.gridBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: $bg-dark-primary;
+  background-image:
+    linear-gradient($hero-grid-line 1px, transparent 1px),
+    linear-gradient(90deg, $hero-grid-line 1px, transparent 1px);
+  background-size: 72px 72px;
+  background-position: center top;
+  pointer-events: none;
+}
+
+.gridBg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% -10%,
+    $phoenix-orange-light,
+    transparent 52%,
+    $phoenix-cyan-light,
+    transparent 58%
+  );
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+  row-gap: 19px;
+}
+
+.title {
+  margin: 0;
+  font-family: $section-title-font-family;
+  font-size: 72px;
+  font-weight: $font-weight-extrabold;
+  line-height: $section-title-line-height;
+  letter-spacing: $section-title-letter-spacing;
+}
+
+.titleFirst {
+  color: $section-title-color;
+}
+
+.titleLast {
+  background: $gradient-cta;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 750px;
+  font-family: $section-subtitle-font-family;
+  font-size: 20px;
+  font-weight: $font-weight-semibold;
+  color: $text-gray-light;
+  line-height: $section-subtitle-line-height;
+}
+
+.subtitleSlash {
+  &::before,
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 12px;
+  }
+}
+
+.description {
+  margin: 0;
+  max-width: 682px;
+  font-family: $section-subtitle-font-family;
+  font-size: 18px;
+  font-weight: $section-subtitle-font-weight;
+  color: $section-subtitle-color;
+  line-height: $section-subtitle-line-height;
+}
+
+.link {
+  color: $secondary-orange;
+  font-weight: $font-weight-semibold;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus-visible {
+  text-decoration: none;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.stats {
+  list-style: none;
+  margin: 20px 0px 0px 0px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  max-width: 832px;
+}
+
+.statCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 21px 14px;
+  border-radius: 14px;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(
+    160deg,
+    rgba(16, 21, 40, 0.95) 0%,
+    rgba(10, 14, 26, 0.98) 100%
+  );
+  border: 1px solid $glass-border-medium;
+  box-shadow:
+    $shadow-xl,
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transition:
+    border-color $duration-normal $ease-out,
+    box-shadow $duration-normal $ease-out,
+    transform $duration-normal $ease-out;
+}
+
+.statCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    $phoenix-orange-light,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity $duration-normal $ease-out;
+  pointer-events: none;
+}
+
+.statCard:hover,
+.statCard:focus-within {
+  border-color: rgba(255, 107, 53, 0.35);
+  box-shadow:
+    $shadow-xl,
+    0 0 24px rgba(255, 107, 53, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.statCard:hover::before,
+.statCard:focus-within::before {
+  opacity: 1;
+}
+
+.statLabel {
+  position: relative;
+  z-index: 1;
+  font-family: $font-secondary;
+  font-size: 13px;
+  color: $primary-orange;
+  font-weight: $font-weight-semibold;
+  text-align: center;
+  line-height: $line-height-tight;
+  letter-spacing: 0.02em;
+}
+
+.contactAnchor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  bottom: 0;
+  left: 50%;
+}
+
+@media (max-width: 640px) {
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

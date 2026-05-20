@@ -1,0 +1,49 @@
+@use "../../styles/variables" as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  line-height: 1;
+  max-width: max-content;
+  max-height: max-content;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 32px;
+  font-family: $font-primary;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  box-shadow: $button-shadow;
+  text-decoration: none;
+}
+
+.primary {
+  background: $gradient-cta;
+}
+
+.primary:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid $glass-border-medium;
+  box-shadow: none;
+}
+
+.secondary:hover {
+  border-color: $glass-border-light;
+  background: $glass-bg-light;
+}
+
+.icon {
+  flex-shrink: 0;
+}
