@@ -15,31 +15,11 @@ type Credential = {
 
 const credentials: Credential[] = [
     {
-        institutionTag: "IIM-A",
-        institutionName: "IIM Ahmedabad",
-        program: "Executive Program in IT Management & Strategic Business Leadership",
-        subtext: "Future CIO/CTO Program",
-        skills: [
-            "IT Governance",
-            "Strategic Leadership",
-            "Business Strategy",
-            "CXO Readiness",
-        ],
-    },
-    {
-        institutionTag: "IIT-R",
-        institutionName: "IIT Roorkee",
-        program: "Executive Program — Cloud Computing & DevOps",
-        subtext: "Specialization Certificate",
-        skills: ["Cloud Architecture", "DevOps Engineering", "Infrastructure Automation"],
-    },
-    {
-        institutionTag: "VNSGU",
-        institutionName: "Veer Narmad South Gujarat University",
-        program:
-            "Master of Science (MSc) & Bachelor of Science (BSc) in Information Technology",
-        subtext: "MSc - BSc in IT",
-        skills: ["Information Technology", "Software Engineering", "Systems Architecture"],
+        institutionTag: "UTU",
+        institutionName: "Uka Tarsadia University",
+        program: "Bachelor's degree, Computer Engineering",
+        subtext: "2016 - 2019",
+        skills: ["Computer Engineering", "Software Engineering", "Problem Solving"],
     },
 ];
 

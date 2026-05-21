@@ -20,8 +20,8 @@ type JourneyEntry = {
 
 const journeyEntries: JourneyEntry[] = [
     {
-        dateRange: "Jan 2024 – Present",
-        title: "Chief Executive Officer",
+        dateRange: "February 2026 – Present",
+        title: "Head of Engineering",
         company: "Neophoenix.ai",
         isCurrent: true,
         badges: [{ type: "current", label: "Current" }],
@@ -32,35 +32,55 @@ const journeyEntries: JourneyEntry[] = [
         ],
     },
     {
-        dateRange: "Jan 2019 – Present",
-        title: "CTO & Co-Founder",
+        dateRange: "October 2025 – Present",
+        title: "Project Manager",
         company: "Inventam Tech Solution",
         isCurrent: true,
         badges: [{ type: "current", label: "Current" }],
         highlights: [
-            "Leading engineering teams to deliver scalable digital outcomes across 7+ years.",
-            "Established cloud partnerships with AWS, Docker, and Vercel for enterprise infrastructure.",
-            "Architecting multi-tenant SaaS platforms and DevOps pipelines at production scale.",
+            "Managed end-to-end software delivery with agile workflows, quality assurance, and deployment coordination.",
+            "Led cross-functional collaboration between engineering, QA, design, and client stakeholder teams.",
+            "Transformed client requirements into scalable project plans, sprint tasks, and delivery strategies.",
         ],
     },
     {
-        dateRange: "Jun 2018 – Jan 2019",
-        title: "Senior Consultant",
-        company: "Narola Infotech",
+        dateRange: "October 2022 – Present",
+        title: "Full-Stack Developer",
+        company: "Inventam Tech Solution",
+        isCurrent: true,
+        badges: [{ type: "current", label: "Current" }],
         highlights: [
-            "Developed innovative solutions for complex client business problems.",
-            "Provided strategic technology consulting across web and mobile domains.",
+            "Built scalable backend systems and APIs for startups and fast-growing digital teams.",
+            "Developed dashboards and cloud-ready applications focused on performance, reliability, and business growth.",
         ],
     },
     {
-        dateRange: "Dec 2015 – May 2018",
-        title: "Sr. Software Engineer",
-        company: "IT Codes",
-        badges: [{ type: "achievement", label: "Constant Learner 2017" }],
+        dateRange: "October 2023 – April 2026",
+        title: "Technical Lead",
+        company: "Inventam Tech Solution",
         highlights: [
-            "Scaled from Software Engineer to Senior role through rapid technical growth.",
-            'Awarded "Constant Learner 2017" in recognition of outstanding professional development.',
-            "Delivered full-stack solutions across enterprise client projects.",
+            "Built Lang Chain-based tools for data extraction, reasoning, and workflow orchestration",
+            "Implemented custom API automation for SaaS & enterprise clients",
+            "Created multi-agent solutions for internal and external processes",
+        ],
+    },
+    {
+        dateRange: "June 2019 – July 2022",
+        title: "Full-Stack Developer",
+        company: "Technobliss",
+        highlights: [
+            "Developed and maintained full-stack applications using PHP, Laravel, and modern JS frameworks",
+            "Improved application performance and reduced error rates through optimized backend logic",
+            "Worked on DB design, schema optimisation, and secure data handling",
+        ],
+    },
+    {
+        dateRange: "December 2018 – May 2019",
+        title: "Software Developer",
+        company: "Success Innovative Technologies",
+        highlights: [
+            "Worked closely with senior developers to understand project architecture and coding standards",
+            "Built backend modules using CodeIgniter for client-based web applications",
         ],
     },
 ];
