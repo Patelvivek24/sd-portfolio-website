@@ -1,0 +1,188 @@
+@use "../../../styles/variables" as *;
+
+.education {
+  position: relative;
+  padding: 80px 26px 96px;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.heading {
+  margin: 0;
+  max-width: 720px;
+  font-family: $section-title-font-family;
+  font-size: clamp(28px, 4vw, $font-size-4xl);
+  font-weight: $section-title-font-weight;
+  line-height: $section-title-line-height;
+  letter-spacing: $section-title-letter-spacing;
+  color: $section-title-color;
+}
+
+.headingAccent {
+  background: $gradient-cta;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  gap: 14px;
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid $glass-border-medium;
+  background: linear-gradient(
+    160deg,
+    rgba($bg-dark-tertiary, 0.55) 0%,
+    rgba($bg-dark-primary, 0.92) 100%
+  );
+  box-shadow:
+    $shadow-xl,
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition:
+    border-color $duration-normal $ease-out,
+    transform $duration-normal $ease-out,
+    box-shadow $duration-normal $ease-out;
+
+  &:hover {
+    border-color: rgba($primary-orange, 0.35);
+    transform: translateY(-2px);
+    box-shadow:
+      $shadow-xl,
+      0 0 24px rgba($primary-orange, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba($primary-orange, 0.35);
+  background: linear-gradient(
+    160deg,
+    rgba($bg-dark-tertiary, 0.9) 0%,
+    rgba($bg-dark-primary, 0.95) 100%
+  );
+  color: $primary-orange;
+  box-shadow: 0 0 12px rgba($primary-orange, 0.1);
+}
+
+.institutionTag {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-family: $font-primary;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  letter-spacing: $letter-spacing-wide;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: $primary-orange;
+  background: rgba($primary-orange, 0.12);
+  border: 1px solid rgba($primary-orange, 0.28);
+}
+
+.cardTitle {
+  margin: 0;
+  font-family: $font-primary;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $text-white;
+  line-height: $line-height-tight;
+}
+
+.program {
+  margin: 0;
+  font-family: $font-secondary;
+  font-size: $font-size-sm;
+  color: $text-gray-light;
+  line-height: $line-height-relaxed;
+}
+
+.subtext {
+  margin: 0;
+  font-family: $font-secondary;
+  font-size: $font-size-xs;
+  color: $section-subtitle-color;
+  line-height: $line-height-normal;
+}
+
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+}
+
+.skillTag {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-family: $font-primary;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  color: $primary-orange;
+  background: rgba($primary-orange, 0.12);
+  border: 1px solid rgba($primary-orange, 0.28);
+}
+
+@media (max-width: 992px) {
+  .grid {
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 768px) {
+  .education {
+    padding: 64px 20px 72px;
+  }
+
+  .inner {
+    gap: 36px;
+  }
+
+  .grid {
+    max-width: none;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .cardTitle {
+    font-size: $font-size-lg;
+  }
+}

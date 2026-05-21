@@ -1,0 +1,171 @@
+// =============================================================================
+// FONT VARIABLES
+// =============================================================================
+
+// Font Families
+$font-primary: "Inter", sans-serif; // Body text font
+$font-secondary: "Inter", sans-serif; // Secondary text font
+$font-mono: "Inter", sans-serif; // Monospace font
+$font-title: $font-primary; // Headings — same as body (Inter)
+
+// Font Sizes
+$font-size-xs: 12px; // 0.75rem
+$font-size-sm: 14px; // 0.875rem
+$font-size-base: 16px; // 1rem
+$font-size-lg: 18px; // 1.125rem
+$font-size-xl: 20px; // 1.25rem
+$font-size-2xl: 24px; // 1.5rem
+$font-size-3xl: 30px; // 1.875rem
+$font-size-4xl: 36px; // 2.25rem
+$font-size-5xl: 48px; // 3rem
+$font-size-6xl: 60px; // 3.75rem
+
+// Font Weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 600;
+$font-weight-extrabold: 800;
+
+// Line Heights
+$line-height-tight: 1.2;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.6;
+$line-height-loose: 1.8;
+
+// Letter Spacing
+$letter-spacing-tight: -0.02em;
+$letter-spacing-normal: 0;
+$letter-spacing-wide: 0.025em;
+
+// =============================================================================
+// COLOR VARIABLES
+// =============================================================================
+
+// Primary Brand Colors - New Phoenix Fire Palette
+$primary-orange: #ff6b35; // Bright Orange-Red gradient start
+$primary-gold: #ff9f1c; // Golden-Orange highlight
+$primary-cyan: #2ec4b6; // Cyan/Teal highlight
+$primary-blue: #4361ee; // Vivid Electric Blue
+
+// Secondary Brand Colors
+$secondary-blue: #0ea5e9;
+$secondary-green: #22c55e;
+$secondary-orange: #f59e0b;
+
+// Background Colors - New Deep Navy Theme
+$bg: #091121;
+$bg-dark-primary: #0a0e1a; // Deep Navy Black – dark theme base
+$bg-dark-secondary: #101528; // Slightly lighter navy for cards/sections
+$bg-dark-tertiary: #16213e;
+
+// Text Colors
+$text-white: #ffffff; // Text Primary
+$text-gray-light: #c7d1e0; // Text Secondary - Soft Cool Gray
+$text-gray-medium: #6b7280;
+$text-gray-dark: #374151;
+
+// Glass Effect Colors
+$glass-bg-light: rgba(255, 255, 255, 0.1);
+$glass-bg-medium: rgba(255, 255, 255, 0.08);
+$glass-bg-dark: rgba(255, 255, 255, 0.05);
+$glass-border-light: rgba(255, 255, 255, 0.2);
+$glass-border-medium: rgba(255, 255, 255, 0.15);
+$glass-border-dark: rgba(255, 255, 255, 0.1);
+
+// Phoenix Animation Colors - Updated with new palette
+$phoenix-orange-light: rgba(255, 107, 53, 0.08);
+$phoenix-orange-medium: rgba(255, 107, 53, 0.2);
+$phoenix-gold-light: rgba(255, 159, 28, 0.1);
+$phoenix-gold-medium: rgba(255, 159, 28, 0.15);
+$phoenix-cyan-light: rgba(46, 196, 182, 0.12);
+$phoenix-cyan-medium: rgba(46, 196, 182, 0.1);
+
+// Gradient Colors - New Phoenix Fire Gradients
+$gradient-primary: linear-gradient(
+  90deg,
+  $primary-orange 0%,
+  $primary-gold 50%,
+  #dabb56 100%
+);
+$gradient-secondary: linear-gradient(135deg, $primary-orange 0%, $primary-gold 100%);
+
+// Common Phoenix Fire Gradient (135deg with cyan)
+$gradient-phoenix-fire: linear-gradient(
+  135deg,
+  #ff9f1c 0%,
+  #ff6b35 40%,
+  #0ea5e9 100%
+);
+
+// New Softer Button Gradients
+$gradient-button-primary: linear-gradient(
+  90deg,
+  #ff6b35 0%,
+  #ff9f1c 50%,
+  #cf9c56 100%
+); // Warm Phoenix glow
+$gradient-button-secondary: linear-gradient(
+  90deg,
+  $primary-cyan 0%,
+  $primary-blue 100%
+); // Cool digital effect
+
+// CTA button & accent text gradient
+$gradient-cta: linear-gradient(90deg, #f97415, #fb923c, #3c83f6);
+$button-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+$gradient-background: linear-gradient(
+  135deg,
+  $bg-dark-primary 0%,
+  $bg-dark-secondary 50%,
+  $bg-dark-tertiary 100%
+);
+
+// Shadow Colors - Updated with new accent colors
+$shadow-glow-orange: 0 0 20px rgba(255, 107, 53, 0.3);
+$shadow-glow-gold: 0 0 20px rgba(255, 159, 28, 0.3);
+$shadow-glow-blue: 0 0 20px rgba(67, 97, 238, 0.3);
+$shadow-lg: 0 5px 20px rgba(255, 107, 53, 0.2);
+$shadow-xl: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+// =============================================================================
+// SECTION TITLE & SUBTITLE VARIABLES
+// =============================================================================
+
+// Common Section Title Styles
+$section-title-font-family: $font-title;
+$section-title-font-family-secondary: $font-title;
+$section-title-font-size: clamp(32px, 36px, 40px);
+$section-title-font-weight: $font-weight-bold;
+$section-title-color: #ffffff; // Pure white color for all section titles
+$section-title-line-height: $line-height-tight;
+$section-title-letter-spacing: $letter-spacing-tight;
+$section-title-margin-bottom: 20.8px;
+
+// Common Section Subtitle Styles
+$section-subtitle-font-family: $font-primary; // Inter for subtitles
+$section-subtitle-font-family-secondary: $font-secondary; // Inter for secondary subtitles
+$section-subtitle-font-size: $font-size-lg; // Increased font size for better readability
+$section-subtitle-font-weight: $font-weight-normal;
+$section-subtitle-color: rgba(255, 255, 255, 0.6); // Consistent color across all sections
+$section-subtitle-line-height: 1.6; // Consistent line height for info paragraphs
+$section-subtitle-max-width: 700px; // Consistent max-width for info paragraphs
+$section-subtitle-margin-bottom: 0;
+
+// =============================================================================
+// ANIMATION DURATIONS
+// =============================================================================
+
+$duration-fast: 0.15s;
+$duration-normal: 0.3s;
+$duration-slow: 0.5s;
+$duration-slower: 0.8s;
+
+// =============================================================================
+// EASING FUNCTIONS
+// =============================================================================
+
+$ease-out: ease-out;
+$ease-in-out: ease-in-out;

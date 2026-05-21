@@ -1,0 +1,14 @@
+@use "../../styles/variables" as *;
+
+.statCounter {
+  position: relative;
+  z-index: 1;
+  font-family: $font-primary;
+  font-size: 33px;
+  font-weight: $font-weight-extrabold;
+  color: $text-white;
+  line-height: 1;
+  letter-spacing: $letter-spacing-tight;
+  display: inline-block;
+  min-width: 2ch;
+}
