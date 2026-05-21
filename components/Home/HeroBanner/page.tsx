@@ -19,7 +19,7 @@ export function HeroBanner() {
       <div className={styles.inner}>
         <Badge
           icon={<BadgeTrendingUpIcon />}
-          items={["CEO", "AI Product Strategist", "Tech Founder"]}
+          items={["Head of Engineering", "Technical Leadership"]}
         />
 
         <h1 className={styles.title}>
@@ -28,11 +28,11 @@ export function HeroBanner() {
         </h1>
 
         <p className={styles.subtitle}>
-          CEO · Neophoenix.ai
+        Head of Engineering · Neophoenix.ai
           <span className={styles.subtitleSlash}>/</span>
-          CTO &amp; Co-founder · Inventam
-          <span className={styles.subtitleSlash}>/</span>
-          AI Product Architect
+          Technical Lead  · Inventam
+          {/* <span className={styles.subtitleSlash}>/</span> */}
+          {/* AI Product Architect */}
         </p>
 
         <p className={styles.description}>

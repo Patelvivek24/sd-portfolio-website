@@ -185,15 +185,25 @@
 }
 
 .tag {
-  display: inline-block;
-  padding: 6px 12px;
+  // display: inline-block;
+  // padding: 6px 12px;
+  // border-radius: 999px;
+  // font-family: $font-primary;
+  // font-size: $font-size-xs;
+  // font-weight: $font-weight-medium;
+  // color: $primary-orange;
+  // background: #ff6b351f;
+  // border: 1px solid #ff6b3547;
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
   border-radius: 999px;
   font-family: $font-primary;
   font-size: $font-size-xs;
   font-weight: $font-weight-medium;
-  color: $primary-orange;
-  background: #ff6b351f;
-  border: 1px solid #ff6b3547;
+  color: $section-subtitle-color;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid $glass-border-dark;
 }
 
 .visitLink {

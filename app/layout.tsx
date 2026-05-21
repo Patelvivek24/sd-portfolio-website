@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Shailee Desai — CEO · AI Product Strategist · Tech Founder",
+  title: "Shailee Desai — Head of Engineering · Technical Lead",
   description:
     "Driving AI strategy and execution at Neophoenix.ai. Building revenue-producing AI systems with Inventam Tech Solution.",
 };
